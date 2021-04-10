@@ -1,0 +1,13 @@
+[Unit]
+Description=Multiverse daemon
+After=network.target
+
+[Service]
+User=multi
+Group=multi
+ExecStart=/usr/bin/multi daemon
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
